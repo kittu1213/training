@@ -14,82 +14,25 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- <script>
-        let title
-       for(let i=0;i<3;i++){
-            title=document.createElement('h2')
-            title.className="tt"
-            title.textContent=i
-            console.log(title)
-        }
-    </script> -->
+<div>
+    <div id="a">
+        <h1 id = 'r'>Pardhu</h1>
+        <h1 >Lohith</h1>
+    </div>
 
-
-<!-- <script>
-    const titles=["saicharan","pardhu","lohith"]
-    for(let i=0;i<titles.length;i++){
-        let title=document.createElement('h1');
-        title.className="a";
-        title.textContent=titles[i]
-        console.log(title)
-    } -->
-
-
-
-    
-
-
-
-<!-- </script> -->
- <!-- removing a child element from a parent node: -->
- <!-- <h1> removing Child Node</h1>
- <h2> iam saicharan</h2>
-
- <ul>
-    <li>saicharan</li>
-    <li>pardhu</li>
-    <li>lohith</li>
- </ul>
-
- <script>
-    const ul=document.querySelector('ul')
-    const lists=document.querySelectorAll('li')
-    console.log(lists)
-    for(const list of lists){
-        console.log(Removing:${list.textContent})
-        ul.removeChild(list)
-        console.log(lists)
-    }
- </script> -->
-
- <div id="a">
-    <h1>saicharan</h1>
-    <h1>lohith</h1>
- </div>
- <div id="b">
-    <h1>pardhu</h1>
-    <h1>srinath</h1>
-
+    <div id="b">
+        <h1>Saicharan</h1>
+        <h1>Srinath</h1>
+</div>
     <script>
-        let n=document.createElement("h2")
-        n.textContent="lohith is the team lead"
-        //get the parent element
+        let n = document.createElement("h2")
+        n.textContent = 'Askay'
 
-        let p=document.getElementById("b")
-        console.log(p.innerText)
-       
-        //append the new element to the parent node
-        p.appendChild(n)
-        
-        //log the innertext of the parent
+        let p = document.getElementById('a')
+        let l = document.getElementById('r')
+        p.insertBefore(n,l)
         console.log(p)
-        console.log(p.innerText)
     </script>
-
-
- </div>
-</body>
-</html>
 
 </body>
 </html>

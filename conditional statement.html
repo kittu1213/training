@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voter Eligibility Check</title>
+    <script>
+        function checkVoterEligibility() {
+            // Get input values
+            const age = parseInt(document.getElementById('age').value);
+            const isCitizen = document.getElementById('isCitizen').checked;
+            const passedCitizenshipTest = document.getElementById('passedTest').checked;
+
+            // Determine eligibility
+            let eligibilityMessage = "";
+
+            if (age < 18) {
+                eligibilityMessage = "Not eligible to vote";
+            } else if (isCitizen) {
+                eligibilityMessage = "Eligible to vote";
+            } else if (!isCitizen && passedCitizenshipTest) {
+                eligibilityMessage = "Eligible to vote";
+            } else {
+                eligibilityMessage = "Not eligible to vote";
+            }
+
+            // Show result
+            document.getElementById('result').innerText = eligibilityMessage;
+        }
+    </script>
+</head>
+<body>
+    <h1>Check Voter Eligibility</h1>
+    <form onsubmit="event.preventDefault(); checkVoterEligibility();">
+        <label for="age">Enter your age: </label>
+        <input type="number" id="age" required><br><br>
+
+        <label for="isCitizen">Are you a citizen?</label>
+        <input type="checkbox" id="isCitizen"><br><br>
+
+        <label for="passedTest">Have you passed the citizenship test?</label>
+        <input type="checkbox" id="passedTest"><br><br>
+
+        <button type="submit">Check Eligibility</button>
+    </form>
+
+    <h2 id="result"></h2>
+</body>
+</html>
+
+</body>
+</html>
